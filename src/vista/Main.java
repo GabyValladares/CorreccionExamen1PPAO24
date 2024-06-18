@@ -23,6 +23,7 @@ public class Main {
         lolita.setNombreTienda("Lolita");
         lolita.setPropietario("Gabriela Valladares");
         lolita.setRuc("1002003001001");
+        lolita.getListaComputadoras();
         //lolita.setListaComputadoras("1,2,3");
         for (int i = 0; i < listaComputadoras.length; i++) {
             
@@ -50,16 +51,27 @@ public class Main {
             if (marcaBusqueda==p.getMarca());
             p.imprimir();
             
-          
+        //LISTA DE PROCESADORES
+    
         }
-        for (int i = 0; i < listaComputadoras.length; i++)
-           
-        {
+        for (int i = 0; i < listaComputadoras.length; i++){
           listaComputadoras[i].imprimir();
         }
-    }
-    //LISTA DE PROCESADORES
+        System.out.println("Ingrese el procesador a buscar: ");
+        String procesadorBusqueda = es.next();
+        for(Computadora p : listaComputadoras){
+            if (procesadorBusqueda==p.getMarca());
+            p.imprimir();
+            
+            
+        }
+        for (int i = 0; i < listaComputadoras.length; i++){
+          listaComputadoras[i].imprimir();
+        }
+    } 
+    
     //LISTA DE PROCESADORES +MEMORIAS RAM
+    
     
     //LISTA DE PRECIOS
 }
