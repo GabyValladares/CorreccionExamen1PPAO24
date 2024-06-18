@@ -4,21 +4,12 @@
  */
 package modelo;
 
-/**
- *
- * @author Usuario
- */
 public class Tienda {
-//         Nombre de la tienda.
-//     Propietario de la tienda.
-//     Identificador tributario de la tienda.
-   // 1)ATRIBUTOS
-            private String nombreTienda;
-            private String propietario;
-            private String ruc;
-            private Computadora[] listaComputadoras;
+    private String nombreTienda;
+    private String propietario;
+    private String ruc;
+    private Computadora[] listaComputadoras;
 
-            //  2) CONSTRUCTORES
     public Tienda() {
     }
 
@@ -28,10 +19,6 @@ public class Tienda {
         this.ruc = ruc;
         this.listaComputadoras = listaComputadoras;
     }
-
-   
-    
-      //3) ENCAPSULAMIENTO
 
     public String getNombreTienda() {
         return nombreTienda;
@@ -64,14 +51,37 @@ public class Tienda {
     public void setListaComputadoras(Computadora[] listaComputadoras) {
         this.listaComputadoras = listaComputadoras;
     }
-    
-    
-    //4)MÉTODOS DE REGLA DE NEGOCIO
-    public void imprimir(){
-        System.out.println("DATOS DE LA TIENDA+\n"+
-                "Nombre:"+getNombreTienda()+"\n"+
-                "Propietario:"+getPropietario()+"\n"+
-                "RUC:"+getRuc()+
-                "Computadoras Disponibles"+getListaComputadoras());
+
+    public void imprimir() {
+        System.out.println("DATOS DE LA TIENDA\n" +
+                "Nombre: " + getNombreTienda() + "\n" +
+                "Propietario: " + getPropietario() + "\n" +
+                "RUC: " + getRuc() + "\n" +
+                "Computadoras Disponibles: ");
+        for (Computadora computadora : getListaComputadoras()) {
+            computadora.imprimir();
+        }
+    }
+
+    public void listaProcesadores() {
+        System.out.println("LISTA DE PROCESADORES:");
+        for (Computadora computadora : listaComputadoras) {
+            System.out.println(computadora.getCaracteristicasProcesador());
+        }
+    }
+
+    public void listaProcesadoresMemorias() {
+        System.out.println("LISTA DE PROCESADORES + MEMORIAS RAM:");
+        for (Computadora computadora : listaComputadoras) {
+            System.out.println("Procesador: " + computadora.getCaracteristicasProcesador() + 
+                               ", Memoria RAM: " + computadora.getCantidadMemoria());
+        }
+    }
+
+    public void listaPrecios() {
+        System.out.println("LISTA DE PRECIOS:");
+        for (Computadora computadora : listaComputadoras) {
+            System.out.println(computadora.getPrecio());
+        }
     }
 }

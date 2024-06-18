@@ -8,12 +8,8 @@ package modelo;
  *
  * @author Usuario
  */
+
 public class Computadora {
-//         Marca del computador.
-//     Cantidad de memoria.
-//     Características del procesador.
-//     Sistema operativo.
-//     Precio del computador.
     private String marca;
     private int cantidadMemoria;
     private String caracteristicasProcesador;
@@ -71,13 +67,12 @@ public class Computadora {
         this.precio = precio;
     }
     
-    public void imprimir(){
-    
-        System.out.println("DATOS DE LA COMPUTADORA\n"+
-                "Marca:"+getMarca()+"\n"+
-                "Memoria RAM:"+getCantidadMemoria()+"\n"+
-                "Procesador:"+getCaracteristicasProcesador()+"\n"+
-                "Sistema Operativo:"+getSistemaOperativo()+"\n"+
-                "Precio:"+getPrecio());
+    public void imprimir() {
+        System.out.println("DATOS DE LA COMPUTADORA\n" +
+                "Marca: " + getMarca() + "\n" +
+                "Memoria RAM: " + getCantidadMemoria() + "\n" +
+                "Procesador: " + getCaracteristicasProcesador() + "\n" +
+                "Sistema Operativo: " + getSistemaOperativo() + "\n" +
+                "Precio: " + getPrecio());
     }
 }
