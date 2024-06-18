@@ -16,16 +16,20 @@ public class Tienda {
             private String nombreTienda;
             private String propietario;
             private String ruc;
+            private Computadora[] listaComputadoras;
 
             //  2) CONSTRUCTORES
     public Tienda() {
     }
 
-    public Tienda(String nombreTienda, String propietario, String ruc) {
+    public Tienda(String nombreTienda, String propietario, String ruc, Computadora[] listaComputadoras) {
         this.nombreTienda = nombreTienda;
         this.propietario = propietario;
         this.ruc = ruc;
+        this.listaComputadoras = listaComputadoras;
     }
+
+   
     
       //3) ENCAPSULAMIENTO
 
@@ -52,11 +56,22 @@ public class Tienda {
     public void setRuc(String ruc) {
         this.ruc = ruc;
     }
+
+    public Computadora[] getListaComputadoras() {
+        return listaComputadoras;
+    }
+
+    public void setListaComputadoras(Computadora[] listaComputadoras) {
+        this.listaComputadoras = listaComputadoras;
+    }
+    
+    
     //4)MÉTODOS DE REGLA DE NEGOCIO
     public void imprimir(){
         System.out.println("DATOS DE LA TIENDA+\n"+
                 "Nombre:"+getNombreTienda()+"\n"+
                 "Propietario:"+getPropietario()+"\n"+
-                "RUC:"+getRuc());
+                "RUC:"+getRuc()+
+                "Computadoras Disponibles"+getListaComputadoras());
     }
 }
