@@ -26,7 +26,7 @@ public class Main {
         //TIENDA
         Tienda lolita=new Tienda();
         lolita.setNombreTienda("Lolita");
-        lolita.setPropietario("Gabriela Valladares");
+        lolita.setPropietario("Alejandro Cevallos");
         lolita.setRuc("1002003001001");
         
         for (int i = 0; i < listaComputadoras.length; i++) {
@@ -46,23 +46,23 @@ public class Main {
             listaComputadoras[i]=c1;
         }
         
-        System.out.println("El Número de Computadoras que posee la tienda: " + 
-                listaComputadoras.length);
-        System.out.println("Ingrese la marca a buscar: ");
-        String marcaBusqueda = es.next();
-        for(Computadora p : listaComputadoras){
-            if (marcaBusqueda.equals(p.getMarca())){
-                p.imprimir();
-            }else{
-                System.out.println("No existe computadoras con esa marca.");
-            }
-        }
-        
+//        System.out.println("El Número de Computadoras que posee la tienda: " + 
+//                listaComputadoras.length);
+//        System.out.println("Ingrese la marca a buscar: ");
+//        String marcaBusqueda = es.next();
+//        for(Computadora p : listaComputadoras){
+//            if (marcaBusqueda.equals(p.getMarca())){
+//                p.imprimir();
+//            }else{
+//                System.out.println("No existe computadoras con esa marca.");
+//            }
+//        }
+//        
         lolita.setListaComputadoras(listaComputadoras);
         
-        for(Computadora p : lolita.getListaComputadoras()) {
-            p.imprimir();
-        }
+//        for(Computadora p : lolita.getListaComputadoras()) {
+//            p.imprimir();
+//        }
         System.out.println("Lista de procesadores:");
         for(Computadora p : lolita.getListaComputadoras()) {
             System.out.println("- " + p.getCaracteristicasProcesador());
