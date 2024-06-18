@@ -58,5 +58,8 @@ public class Main {
           listaComputadoras[i].imprimir();
         }
     }
+    //LISTA DE PROCESADORES
+    //LISTA DE PROCESADORES +MEMORIAS RAM
     
+    //LISTA DE PRECIOS
 }
