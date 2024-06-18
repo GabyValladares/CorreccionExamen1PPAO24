@@ -13,53 +13,60 @@ import modelo.Tienda;
  * @author Usuario
  */
 public class Main {
+
     public static void main(String[] args) {
-        Scanner es=new Scanner(System.in);
+        Scanner es = new Scanner(System.in);
         System.out.println("Ingrese el número de Computadoras que va a tener la Tienda");
-        Computadora[] listaComputadoras=new Computadora[es.nextInt()];
-        
+        Computadora[] listaComputadoras = new Computadora[es.nextInt()];
+
         //TIENDA
-        Tienda lolita=new Tienda();
+        Tienda lolita = new Tienda();
         lolita.setNombreTienda("Lolita");
         lolita.setPropietario("Gabriela Valladares");
         lolita.setRuc("1002003001001");
+        lolita.setListaComputadoras(listaComputadoras);
         //lolita.setListaComputadoras("1,2,3");
         for (int i = 0; i < listaComputadoras.length; i++) {
+
+            //COMPUTADORAS
+            Computadora c1 = new Computadora();
+            System.out.println("Ingrese la Marca:");
+            c1.setMarca(es.next());
+            System.out.println("Ingrese la Cantidad de Memoria RAM:");
+            c1.setCantidadMemoria(es.nextInt());
+            System.out.println("Ingrese la información del Procesador:");
+            c1.setCaracteristicasProcesador(es.next());
+            System.out.println("Ingrese el sistema operativo:");
+            c1.setSistemaOperativo(es.next());
+            System.out.println("Ingrese el precio:");
+            c1.setPrecio(es.nextDouble());
+            listaComputadoras[i] = c1;
             
-        
-        
-        //COMPUTADORAS
-        Computadora c1=new Computadora();
-        System.out.println("Ingrese la Marca:");
-        c1.setMarca(es.next());
-        System.out.println("Ingrese la Cantidad de Memoria RAM:");
-        c1.setCantidadMemoria(es.nextInt());
-        System.out.println("Ingrese la información del Procesador:");
-        c1.setCaracteristicasProcesador(es.next());
-        System.out.println("Ingrese el sistema operativo:");
-        c1.setSistemaOperativo(es.next());
-        System.out.println("Ingrese el precio:");
-        c1.setPrecio(es.nextDouble());
-        listaComputadoras[i]=c1;
         }
-        System.out.println("El Número de Computadoras que posee la tienda: " + 
-                listaComputadoras.length);
-        System.out.println("Ingrese la marca a buscar: ");
-        String marcaBusqueda = es.next();
-        for(Computadora p : listaComputadoras){
-            if (marcaBusqueda==p.getMarca());
-            p.imprimir();
-            
-          
+//        System.out.println("El Número de Computadoras que posee la tienda: "
+//                + listaComputadoras.length);
+//        System.out.println("Ingrese la marca a buscar: ");
+//        String marcaBusqueda = es.next();
+//        for (Computadora p : listaComputadoras) {
+//            if (marcaBusqueda == p.getMarca());
+//            p.imprimir();
+//
+//        }
+        for (int i = 0; i < listaComputadoras.length; i++) {
+            //  listaComputadoras[i].imprimir();
         }
-        for (int i = 0; i < listaComputadoras.length; i++)
-           
-        {
-          listaComputadoras[i].imprimir();
+
+        //lolita.imprimir();
+        lolita.setListaComputadoras(listaComputadoras);
+        System.out.println("La lista de Procesadores disponibles es:");
+        //LISTA DE PROCESADORES
+        for (Computadora p : lolita.getListaComputadoras()) {
+
+            p.getCaracteristicasProcesador();
         }
+
     }
-    //LISTA DE PROCESADORES
+
     //LISTA DE PROCESADORES +MEMORIAS RAM
-    
     //LISTA DE PRECIOS
 }

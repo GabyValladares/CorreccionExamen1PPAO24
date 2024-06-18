@@ -72,6 +72,12 @@ public class Tienda {
                 "Nombre:"+getNombreTienda()+"\n"+
                 "Propietario:"+getPropietario()+"\n"+
                 "RUC:"+getRuc()+
-                "Computadoras Disponibles"+getListaComputadoras());
+                "Computadoras Disponibles"
+        
+        );
+        for (Computadora p:getListaComputadoras()) {
+            p.getMarca();
+            p.imprimir();
+        }
     }
 }
